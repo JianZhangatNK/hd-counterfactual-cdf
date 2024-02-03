@@ -2,6 +2,7 @@
 rm(list = ls())
 source('counterCDF.R')
 source('counterCDF_stats.R')
+source('counterCDF_graph.R')
 n=500
 B=500
 p=50
@@ -23,5 +24,9 @@ object3
 ## ATT
 OUTPUT_STATS = counterCDF_stats(object0)
 OUTPUT_STATS$ATT
+
+## Graphs
+counterCDF_graph(object0)
+
 
 
