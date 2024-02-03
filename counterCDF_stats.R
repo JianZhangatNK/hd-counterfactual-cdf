@@ -8,8 +8,6 @@ counterCDF_stats <- function(object){
   ## Initializing...
   object1 = object$Estimate
   ylim.list = object1$evalY
-  min_Y = object1$minY
-  max_Y = object1$maxY
   F1yhat = object1$Y1
   Fhat.dml = object1$DML
   Fhat.psdb = object1$PSDB
@@ -18,6 +16,8 @@ counterCDF_stats <- function(object){
   ngrid = length(ylim.list)
   
   object2 = object$Bootstrap
+  min_Y = object2$minY
+  max_Y = object2$maxY
   F1yhat.B = object2$Y1
   Fhat.dml.B = object2$DML
   Fhat.psdb.B = object2$PSDB
