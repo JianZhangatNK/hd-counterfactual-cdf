@@ -96,14 +96,15 @@ counterCDF <- function(y, X, D, y.grids, B=500, f){
   }
   counterCDF = list(
     evalY = y.grids,
-    minY = min(y),
-    maxY = max(y),
     Y0 = F0yhat,
     Y1 = F1yhat,
     DML = Fhat.dml,
     PSDB = Fhat.psdb
   )
   bootstrap.CDF = list(
+    n = n,
+    minY = min(y),
+    maxY = max(y),
     evalY = y.grids,
     Y0 = F0yhat.B,
     Y1 = F1yhat.B,
